@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://fastforward.team/About.html</loc>
+        <loc>https://fastforward.team/about.html</loc>
     </url>
     <url>
-        <loc>https://fastforward.team/Contact.html</loc>
+        <loc>https://fastforward.team/contact.html</loc>
     </url>
     <url>
         <loc>https://fastforward.team/index.html</loc>
@@ -13,6 +13,6 @@
         <loc>https://fastforward.team/install.html</loc>
     </url>
     <url>
-        <loc>https://fastforward.team/Privacy.html</loc>
+        <loc>https://fastforward.team/privacy.html</loc>
     </url>
 </urlset>
