@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://fastforward.team/about.html</loc>
+        <loc>https://fastforward.team/</loc>
     </url>
     <url>
-        <loc>https://fastforward.team/contact.html</loc>
+        <loc>https://fastforward.team/contact</loc>
     </url>
     <url>
-        <loc>https://fastforward.team/index.html</loc>
+        <loc>https://fastforward.team/example-links</loc>
     </url>
     <url>
-        <loc>https://fastforward.team/install.html</loc>
+        <loc>https://fastforward.team/faq</loc>
     </url>
     <url>
-        <loc>https://fastforward.team/privacy.html</loc>
+        <loc>https://fastforward.team/privacy</loc>
+    </url>
+    <url>
+        <loc>https://fastforward.team/firstrun</loc>
     </url>
 </urlset>
