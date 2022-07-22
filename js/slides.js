@@ -16,12 +16,7 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
-  try {
     slides[slideIndex-1].style.display = "block";  
-  }
-  catch (err) {
-   interval = setInterval(plusSlides, -1); 
-  }
 }
 
 interval = setInterval(plusSlides, 4000);
