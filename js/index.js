@@ -79,7 +79,7 @@ if(btn != null) {
     case "Chrome":
       btn.classList.add("chrome");
       btn.innerText += " for Chrome";
-      btn.href="https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe";
+      btn.href="https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md";
       break;
     case "Edge":
       btn.classList.add("edge");
@@ -89,12 +89,12 @@ if(btn != null) {
     case "Opera":
       btn.classList.add("opera");
       btn.innerText += " for Opera";
-      btn.href="https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe";
+      btn.href="https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md";
       break;
     case "Chromium based browsers":
       btn.classList.add("chromium");
       btn.innerText += " for Chromium based browsers";
-      btn.href="https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe";
+      btn.href="https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md";
       break;
     default:
       btn.classList.add("default");
