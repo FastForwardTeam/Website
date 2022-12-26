@@ -363,7 +363,7 @@ section {
   padding: 60px 0 60px 0;
   background-color: var(--ff-background);
   text-align: center;
-  max-width: 716px;
+  max-width: 55.938vw;
   margin-left: auto;
   margin-right: auto;
   padding-left: 5px;
@@ -419,7 +419,7 @@ body.small h2, body.small h3 {
   -webkit-text-fill-color: initial;
 }
 
-a.btn {
+.btn {
   border: 2px solid;
   border-image: linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%) 1;
   border-radius: .3rem;
@@ -438,6 +438,7 @@ a.btn {
   transition: padding .15s ease-in-out, margin .15s ease-in-out;
   margin-bottom: 0.5vh;
   margin-top: 0.5vh;
+  outline: none;
 }
 
 @keyframes AnimateBG { 
@@ -452,8 +453,7 @@ a.btn {
 
 a.btn:hover {
   padding: 1vh 2.5vw;
-  margin-bottom: 0;
-  margin-top: 0;
+  margin: 0;
 }
 
 a.btn.animate:hover {
