@@ -183,7 +183,7 @@ header.dropdowndisplay.small .nav.dropdowndisplay .nav-ul {
 
 header.dropdowndisplay.small {
   flex-flow: column wrap;
-  height: 300px;
+  height: 335px;
   overflow-y: hidden;
 }
 
@@ -368,6 +368,10 @@ section {
   margin-right: auto;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+.small section {
+  max-width: 716px;
 }
 
 h1 {
