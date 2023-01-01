@@ -439,6 +439,7 @@ body.small h2, body.small h3 {
   margin-bottom: 0.5vh;
   margin-top: 0.5vh;
   outline: none;
+  color: var(--ff-aqua);
 }
 
 @keyframes AnimateBG { 
