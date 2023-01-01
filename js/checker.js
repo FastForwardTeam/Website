@@ -24,7 +24,7 @@ function check() {
     for(i = 0; i < Object.keys(bypasses).length; i++) {
       bypass = Object.keys(bypasses)[i];
       if(bypass[0] == "(") {
-        regex = new RegExp(".*" + bypass.slice(1, -1).replace(/\//g, "\\/").replace(/https:\/\//g, "") + ".*")
+        regex = new RegExp(".*" + bypass.slice(2, -2).replace(/\//g, "\\/").replace(/https:\/\//g, "") + ".*")
         if(regex.test(url)) {
           values(bypass, (bypasses[bypass] == undefined || bypasses[bypass] == "C") ? "✓" : "✗", bypasses[bypass] == undefined ? "✓" : "✗", bypasses[bypass] == "C" ? "✓" : "✗", bypasses[bypass] == "X" ? "We no longer bypass this site because it is no longer active, or harmful to your computer. Dont think so? <a class='link' href='https://github.com/FastForwardTeam/FastForward/issues/new'>Open an issue on GitHub</a>" : "Bypass not working? <a class='link' href='https://github.com/FastForwardTeam/FastForward/issues/new'>Open an issue on GitHub</a>");
           return;
