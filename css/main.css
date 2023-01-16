@@ -183,7 +183,7 @@ header.dropdowndisplay.small .nav.dropdowndisplay .nav-ul {
 
 header.dropdowndisplay.small {
   flex-flow: column wrap;
-  height: 335px;
+  height: calc(36px * 7 + 120px);
   overflow-y: hidden;
 }
 
@@ -443,6 +443,7 @@ body.small h2, body.small h3 {
   margin-bottom: 0.5vh;
   margin-top: 0.5vh;
   outline: none;
+  color: var(--ff-aqua);
 }
 
 @keyframes AnimateBG { 
@@ -464,6 +465,11 @@ a.btn.animate:hover {
   background-image: linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 20%, var(--ff-purple) 40%, var(--ff-aqua) 60%, var(--ff-blue) 80%, var(--ff-purple) 100%);
   background-size: 260% 100%;
   animation: AnimateBG 2s linear infinite;
+}
+
+.btn#url {
+  vertical-align: middle;
+  font-size: calc(0.5vw + 100%);
 }
 
 .link {
