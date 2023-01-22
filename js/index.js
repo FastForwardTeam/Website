@@ -106,7 +106,7 @@ if(btn != null) {
 var str = "";
 document.onkeypress = function(e) {
   str += e.key;
-  if(str.toLowerCase().indexOf("unjust1ce") != -1 || str.toLowerCase().indexOf("unjustice") != -1) {
+  if(str.toLowerCase().indexOf("aliahx") != -1) {
     document.body.parentElement.style="animation: rainbow infinite 10s linear";
     document.onkeypress = null;
   }
