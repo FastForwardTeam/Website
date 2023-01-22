@@ -107,8 +107,8 @@ var str = "";
 document.onkeypress = function(e) {
   str += e.key;
   if(str.toLowerCase().indexOf("aliahx") != -1) {
-    document.body.parentElement.style="animation: rainbow infinite 10s linear";
-    document.onkeypress = null;
+    str = "";
+    document.body.parentElement.classList.toggle("paused");
   }
 }
 
