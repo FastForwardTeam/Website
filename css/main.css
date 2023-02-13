@@ -483,6 +483,11 @@ a.btn.animate:hover {
   font-size: calc(0.5vw + 100%);
 }
 
+select.btn {
+  font-size: 100%;
+  cursor: pointer;
+}
+
 .link {
   text-decoration: none;
   background-image: linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 100%);
