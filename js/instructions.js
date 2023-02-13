@@ -13,7 +13,6 @@ function nextPage(currentPage) {
   document.querySelectorAll(".pageBackground")[currentPage].classList.add("leaving");
   document.querySelectorAll(".pageBackground")[currentPage + 1].classList.add("arriving");
   document.querySelectorAll(".pageBackground")[currentPage + 1].classList.remove("hidden");
-  fixHeight();
 
   setTimeout(function() {
     document.querySelectorAll(".pageBackground")[currentPage].classList.add("hidden");
@@ -62,10 +61,10 @@ function fixHeight() {
   }
 
   document.querySelector("#form").style.marginBottom = document.querySelector(".pageBackground:not(.hidden):not(.leaving)").offsetHeight + "px"
-}
 
-window.addEventListener('resize', function(event) {
-  fixHeight();
-}, true);
+  setTimeout(function() {
+    fixHeight();
+  }, 50)
+}
 
 fixHeight();
