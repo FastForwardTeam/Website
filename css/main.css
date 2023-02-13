@@ -540,6 +540,12 @@ code {
   position: absolute;
 }
 
+@media (max-width: 650px) {
+  code {
+    word-break: break-all;
+  }
+}
+
 .leaving {
   animation-name: fadeOut;
   animation-duration: 0.375s;
