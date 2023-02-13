@@ -435,10 +435,6 @@ body.small h2, body.small h3 {
   font-size: calc(1.06vw + 100%);
   display: inline-block;
   text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   background-image: linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -448,6 +444,24 @@ body.small h2, body.small h3 {
   margin-top: 0.5vh;
   outline: none;
   color: var(--ff-aqua);
+}
+
+a.btn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+::placeholder {
+  -webkit-text-fill-color: initial;
+  color: rgba(0,0,0,0.25);
+}
+
+@-moz-document url-prefix() {
+  ::placeholder {
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @keyframes rainbow { 
@@ -490,6 +504,7 @@ a.btn.animate:hover {
 select.btn {
   font-size: calc(75% + 1vw);
   cursor: pointer;
+  -webkit-appearance: none;
 }
 
 .center {
