@@ -63,7 +63,7 @@ minSize.addListener(check);
 
 function browser() {
 	u = navigator.userAgent;
-	return u.indexOf("Firefox") > -1 ? "Firefox" : u.indexOf("OP") > -1 ? "Opera" : u.indexOf("Edg") > -1 ? "Edge" : u.indexOf("Chrome") > -1 ? "Chrome" : !!window.chrome ? "Chromium based browsers" : null;
+	return u.indexOf("Firefox") > -1 ? "Firefox" : u.indexOf("OP") > -1 ? "Opera" : u.indexOf("Edg") > -1 ? "Edge" : u.indexOf("Chrome") > -1 ? "Chrome" : !!window.chrome ? "Chromium based browsers" : navigator.userAgent.indexOf("Safari") > -1 ? "Safari" : null;
 }
 
 //add get fastforward for browser button
