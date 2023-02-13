@@ -74,32 +74,25 @@ if(btn != null) {
     case "Firefox":
       btn.classList.add("firefox");
       btn.innerText += " for Firefox";
-      btn.href="https://addons.mozilla.org/en-US/firefox/addon/fastforwardteam/";
       break;
     case "Chrome":
       btn.classList.add("chrome");
       btn.innerText += " for Chrome";
-      btn.href="https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md#chrome-chromium-kiwi-opera-opera-gx-vivaldi-brave-etc";
       break;
     case "Edge":
       btn.classList.add("edge");
       btn.innerText += " for Edge";
-      btn.href="https://microsoftedge.microsoft.com/addons/detail/fastforward/ldcclmkclhomnpcnccgbgleikchbnecl";
       break;
     case "Opera":
       btn.classList.add("opera");
       btn.innerText += " for Opera";
-      btn.href="https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md#chrome-chromium-kiwi-opera-opera-gx-vivaldi-brave-etc";
       break;
     case "Chromium based browsers":
       btn.classList.add("chromium");
       btn.innerText += " for Chromium based browsers";
-      btn.href="https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md#chrome-chromium-kiwi-opera-opera-gx-vivaldi-brave-etc";
       break;
-    default:
-      btn.classList.add("default");
-      btn.href="/install.html";
   }
+  btn.href="./instructions.html";
 }
 
 

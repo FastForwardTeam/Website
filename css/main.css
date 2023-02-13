@@ -122,6 +122,10 @@ header:not(.dropdowndisplay) {
   height: 40px;
 }
 
+a {
+  color: #3391ff;
+}
+
 .nav-a {
   color: var(--ff-link);
   text-decoration: none;
@@ -484,9 +488,83 @@ a.btn.animate:hover {
 }
 
 select.btn {
-  font-size: 100%;
+  font-size: calc(75% + 1vw);
   cursor: pointer;
 }
+
+.center {
+  text-align: center;
+}
+
+code {
+  background-color: var(--ff-module-background); 
+  color: var(--ff-aqua);
+}
+
+.formPage {
+  padding: 10%;
+  padding-bottom: 5%;
+  margin: 0 3px 0 3px;
+  border-radius: .3rem;
+  background-color: var(--ff-background);
+  min-height: 300px;
+}
+
+.formPage .bottom {
+  margin-top: 23vh;
+}
+
+.formPage span {
+  font-size: calc(75% + 1vw);
+}
+
+.pageBackground {
+  background: -webkit-linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%);
+  border-radius: .3rem;
+  padding: 3px 0 3px 0;
+  position: absolute;
+}
+
+.leaving {
+  animation-name: fadeOut;
+  animation-duration: 0.375s;
+  animation-timing-function: ease-out;
+}
+
+.arriving {
+  animation-name: fadeIn;
+  animation-duration: 0.375s;
+  animation-timing-function: ease-out;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeOut {
+  0% {
+    filter: opacity(1);
+    margin-left: 0;
+  }
+  50% {
+    filter: opacity(0);
+  }
+  100% {
+    margin-left: -105%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    filter: opacity(0);
+    margin-left: 105%;
+  }
+  to {
+    filter: opacity(1);
+    margin-left: 0;
+  }
+}
+
 
 .link {
   text-decoration: none;
