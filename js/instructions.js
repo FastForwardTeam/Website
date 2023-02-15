@@ -40,7 +40,7 @@ function loadEndPageContent() {
     <a href="https://microsoftedge.microsoft.com/addons/detail/FastForward/ldcclmkclhomnpcnccgbgleikchbnecl/">Install FastForward</a>`,
     "Safari" : `<p>Unfortunatly, FastForward is not currently supported on Safari.</p>
     We reccomend that you download Mozilla Firefox or Google Chrome instead.<br>
-    <a href="https://www.mozilla.org/en-US/firefox/new/">Download FireFox</a><br>
+    <a href="https://www.mozilla.org/en-US/firefox/new/">Download Firefox</a><br>
     <a href="https://www.google.com/chrome/">Download Chrome</a>`,
     "Other": `<p>You can download FastForward builds with the folling links:</p>
     <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip">Download FastForward for Chromium Based Browsers</a><br>
