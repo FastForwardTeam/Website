@@ -504,7 +504,6 @@ a.btn.animate:hover {
 select.btn {
   font-size: calc(75% + 1vw);
   cursor: pointer;
-  -webkit-appearance: none;
 }
 
 .center {

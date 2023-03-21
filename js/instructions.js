@@ -51,7 +51,7 @@ function loadEndPageContent() {
   
   document.querySelector("#endPage").innerHTML = `
   <span>${browserSelect.options[browserSelect.selectedIndex].innerText}</span><br><br>
-  ${instructions[browserSelect.value] + "<br><br><p>Not working? Check our <a href='faq.html'>FAQ Page</a>.</p>"}`;
+  ${instructions[browserSelect.value] + "<br><br><p>Not working? Check our <a href='https://github.com/FastForwardTeam/FastForward/blob/main/INSTALLING.md#troubleshooting'>Troubleshooting Page</a>.</p>"}`;
 }
 
 function fixHeight() {
