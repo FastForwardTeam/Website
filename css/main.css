@@ -533,6 +533,10 @@ code {
   font-size: calc(75% + 1vw);
 }
 
+#form {
+  transition: all ease-in-out 0.5s;
+}
+
 .pageBackground {
   background: -webkit-linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%);
   border-radius: .3rem;
