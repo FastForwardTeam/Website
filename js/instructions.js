@@ -32,7 +32,7 @@ function loadEndPageContent() {
     If the file is called <code>FastForward_chromium.zip</code>, you have not properly extracted it and will need to try again.<br>
     3. Open <code>${browser == "Opera" ? "opera" : browser == "Brave" ? "brave" : "chrome"}://extensions</code><br>
     4. Enable developer mode, which can be found in the top right corner.<br>
-    5. Drag the <code>FastForward_chromium_0.XXXX.zip</code> file that you downloaded earler into the extentions page.<br>
+    5. Drag the <code>FastForward_chromium_0.XXXX</code> folder that you extracted into the extentions page.<br>
     FastForward should now be installed!`,
     "Firefox" : `<p>FastForward is avalible on the Mozilla Firefox Addons Store!</p>
     <a href="https://addons.mozilla.org/en-US/firefox/addon/FastForwardteam/">Install FastForward</a>`,
