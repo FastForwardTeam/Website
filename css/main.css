@@ -196,6 +196,7 @@ header.small {
   width: 100%;
   top: 0px;
   overflow-x: hidden;
+  z-index: 1;
 }
 
 body.small {
