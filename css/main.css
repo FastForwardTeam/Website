@@ -201,6 +201,7 @@ header.small {
 body.small {
   margin-top: 92px;
   height: calc(100vh - 92px);
+  min-height: calc(100vh - 92px);
 }
 
 @media (min-width: 1002px) {
