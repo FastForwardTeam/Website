@@ -24,18 +24,18 @@ function nextPage(currentPage) {
 function loadEndPageContent() {
   var browser = browserSelect.options[browserSelect.selectedIndex].innerText;
   instructions = {
-    "Chrome" : `<p>Unfortunatly, FastForward was removed from the Chrome Web Store. You will have to manually install it instead.</p>
+    "Chrome" : `<p>Unfortunately, FastForward was removed from the Chrome Web Store. You will have to manually install it instead.</p>
     Manually Installing FastForward:<br>
     1. Download the zip file from <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_chromium.zip">this link</a>.<br>
     2. Unzip (extract) the zip file.<br>
-       This should leave you with a single file named <code>FastForward_chromium_0.XXXX.zip</code>.<br>
+    This should leave you with a single file named <code>FastForward_chromium_0.XXXX.zip</code>.<br>
     If the file is called <code>FastForward_chromium.zip</code>, you have not properly extracted it and will need to try again.<br>
     3. Open <code>${browser == "Opera" ? "opera" : browser == "Brave" ? "brave" : "chrome"}://extensions</code><br>
     4. Enable developer mode, which can be found in the top right corner.<br>
     5. Drag the <code>FastForward_chromium_0.XXXX</code> folder that you extracted into the extentions page.<br>
     FastForward should now be installed!`,
 
-    "Firefox" : `<p>Unfortunatly, FastForward was removed from the Firefox Store. You will have to manually install it instead.</p>
+    "Firefox" : `<p>Unfortunately, FastForward was removed from the Firefox Store. You will have to manually install it instead.</p>
     Manually Installing FastForward:<br>
     1. Download the zip file from <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip">this link</a>.<br>
     2. Unzip (extract) the zip file so that you have <code>FastForward_firefox_0.XXXX.xpi</code>.<br>
