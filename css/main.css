@@ -539,7 +539,7 @@ code {
 }
 
 .pageBackground {
-  background: -webkit-linear-gradient(135deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%);
+  background: -webkit-linear-gradient(315deg, var(--ff-aqua) 0%, var(--ff-blue) 50%, var(--ff-purple) 100%);
   border-radius: .3rem;
   padding: 3px 0 3px 0;
   position: absolute;
