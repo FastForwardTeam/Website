@@ -35,16 +35,21 @@ function loadEndPageContent() {
     5. Drag the <code>FastForward_chromium_0.XXXX</code> folder that you extracted into the extentions page.<br>
     FastForward should now be installed!`,
 
+//     "Firefox" : `<p>Unfortunately, FastForward was removed from the Firefox Store. You will have to manually install it instead.</p>
+//     Manually Installing FastForward:<br>
+//     1. Download the zip file from <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip">this link</a>.<br>
+//     2. Unzip (extract) the zip file so that you have <code>FastForward_firefox_0.XXXX.xpi</code>.<br>
+//     3. Open <code>about:config</code>, and press Accept the Risk and Continue.<br>
+//     4. Search for <code>xpinstall.signatures.required</code>, and make sure it is set to false using the button on the right.<br>
+//     5. Restart Firefox by closing all browser windows and opening it again.
+//     6. Open <code>about:addons</code><br>
+//     7. Drag your <code>FastForward_firefox_X.XXXX.xpi</code> into Firefox, and click "add" when prompted.<br>
+//     FastForward should now be installed!`,
     "Firefox" : `<p>Unfortunately, FastForward was removed from the Firefox Store. You will have to manually install it instead.</p>
     Manually Installing FastForward:<br>
-    1. Download the zip file from <a href="https://nightly.link/FastForwardTeam/FastForward/workflows/main/main/FastForward_firefox.zip">this link</a>.<br>
-    2. Unzip (extract) the zip file so that you have <code>FastForward_firefox_0.XXXX.xpi</code>.<br>
-    3. Open <code>about:config</code>, and press Accept the Risk and Continue.<br>
-    4. Search for <code>xpinstall.signatures.required</code>, and make sure it is set to false using the button on the right.<br>
-    5. Restart Firefox by closing all browser windows and opening it again.
-    6. Open <code>about:addons</code><br>
-    7. Drag your <code>FastForward_firefox_X.XXXX.xpi</code> into Firefox, and click "add" when prompted.<br>
-    FastForward should now be installed!`,
+    1. Download the xpi file from <a href="https://github.com/FastForwardTeam/FastForward/releases/download/0.2237/fastforwardteam-0.2237.xpi">this link</a>.<br>
+    2. Click continue to installation, and then click add.
+    FastForward should now be installed!`
 
     "Edge" : `<p>FastForward is avalible on the Microsoft Edge Addons Store!</p>
     <a href="https://microsoftedge.microsoft.com/addons/detail/FastForward/ldcclmkclhomnpcnccgbgleikchbnecl/">Install FastForward</a>`,
