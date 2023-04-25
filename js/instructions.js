@@ -49,7 +49,7 @@ function loadEndPageContent() {
     Manually Installing FastForward:<br>
     1. Download the xpi file from <a href="https://github.com/FastForwardTeam/FastForward/releases/download/0.2237/fastforwardteam-0.2237.xpi">this link</a>.<br>
     2. Click continue to installation, and then click add.
-    FastForward should now be installed!`
+    FastForward should now be installed!`,
 
     "Edge" : `<p>FastForward is avalible on the Microsoft Edge Addons Store!</p>
     <a href="https://microsoftedge.microsoft.com/addons/detail/FastForward/ldcclmkclhomnpcnccgbgleikchbnecl/">Install FastForward</a>`,
