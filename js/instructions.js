@@ -32,6 +32,7 @@ function loadEndPageContent() {
     If the file is called <code>FastForward_chromium.zip</code>, you have not properly extracted it and will need to try again.<br>
     3. Extract the zip file again.<br>
     This should leave you with a folder named <code>FastForward_chromium_0.XXXX</code>.<br>
+    Remember to store this folder somewhere safe because if it is deleted or moved, FastForward will stop working.<br>
     4. Open <code>${browser == "Opera" ? "opera" : browser == "Brave" ? "brave" : "chrome"}://extensions</code><br>
     5. Enable developer mode, which can be found in the top right corner.<br>
     6. Drag the <code>FastForward_chromium_0.XXXX</code> folder that you extracted into the extentions page.<br>
