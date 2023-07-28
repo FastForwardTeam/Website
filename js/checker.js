@@ -1,4 +1,4 @@
-bypasses = {}
+bypassList = {}
 fetch("https://raw.githubusercontent.com/FastForwardTeam/FastForward/manifest-v3/docs/Bypassed.md").then((response) => {
   response.text().then((data) => {
     data = data.split("\n");
@@ -6,7 +6,7 @@ fetch("https://raw.githubusercontent.com/FastForwardTeam/FastForward/manifest-v3
     data.pop();
     for (i = 0; i < data.length; i++) {
       data[i].replace(/ /g, "").split("|").splice(1, 2)
-      bypasses[data[i].replace(/ /g, "").split("|")[1]] = data[i].replace(/ /g, "").split("|")[2];
+      bypassList[data[i].replace(/ /g, "").split("|")[1]] = data[i].replace(/ /g, "").split("|")[2];
     }
   })
 });
@@ -21,10 +21,10 @@ function values(a, b, c, d) {
 function check() {
   url = this.value;
   if(url != "") {
-    for(i = 0; i < Object.keys(bypasses).length; i++) {
-      bypass = Object.keys(bypasses)[i];
+    for(i = 0; i < Object.keys(bypassList).length; i++) {
+      bypass = Object.keys(bypassList)[i];
       if(bypass.includes(url) || url.includes(bypass)) {
-        values(bypass, (bypasses[bypass] == undefined || bypasses[bypass][0] == "✅") ? "✓" : "✗", bypasses[bypass][0] == "✅" ? "✓" : "✗", bypasses[bypass][0] == "🛑" ? "We no longer bypass this site because it is no longer active, or harmful to your computer. Dont think so? <a class='link' href='https://github.com/FastForwardTeam/FastForward/issues/new'>Open an issue on GitHub</a>" : "Bypass not working? <a class='link' href='https://github.com/FastForwardTeam/FastForward/issues/new'>Open an issue on GitHub</a>");
+        values(bypass, (bypassList[bypass] == undefined || bypassList[bypass][0] == "✅") ? "✓" : "✗", bypassList[bypass][0] == "✅" ? "✓" : "✗", bypassList[bypass][0] == "🛑" ? "We no longer bypass this site because it is no longer active, or harmful to your computer. Dont think so? <a class='link' href='https://github.com/FastForwardTeam/FastForward/issues/new'>Open an issue on GitHub</a>" : "Bypass not working? <a class='link' href='https://github.com/FastForwardTeam/FastForward/issues/new'>Open an issue on GitHub</a>");
         return;
       }
     }
