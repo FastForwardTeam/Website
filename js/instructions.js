@@ -29,10 +29,10 @@ function loadEndPageContent() {
     2. Click continue to installation, and then click add.
     FastForward should now be installed!`,
 
-    "Edge" : `<p>FastForward is avalible on the Microsoft Edge Addons Store!</p>
+    "Edge" : `<p>FastForward is available on the Microsoft Edge Addons Store!</p>
     <a href="https://microsoftedge.microsoft.com/addons/detail/FastForward/ldcclmkclhomnpcnccgbgleikchbnecl/">Install FastForward</a>`,
 
-    "Chrome" : `<p>FastForward is avalible on the Chrome Web Store!</p>
+    "Chrome" : `<p>FastForward is available on the Chrome Web Store!</p>
     <a href="https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe">Install FastForward</a>`,
 
     "Safari" : `<p>Unfortunately, FastForward is not currently supported on Safari.</p>
