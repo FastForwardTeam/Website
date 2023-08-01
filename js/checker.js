@@ -19,7 +19,7 @@ function values(a, b, c, d) {
 }
 
 function check() {
-  url = this.value;
+  url = this.value.toLowerCase();
   if(url != "") {
     for(i = 0; i < Object.keys(bypassList).length; i++) {
       bypass = Object.keys(bypassList)[i];
