@@ -1,0 +1,7 @@
+# Robots.txt for FastForward.team
+# allow all
+User-agent: * 
+Allow: /
+
+# Sitemap
+Sitemap: https://fastforward.team/sitemap.xml
