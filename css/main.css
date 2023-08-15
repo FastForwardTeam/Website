@@ -420,7 +420,7 @@ h3 {
 }
 
 body.small h2, body.small h3 {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 ::selection {
@@ -655,37 +655,37 @@ iframe {
 }
 
 .slide img {
-	width: 100%;
+  width: 100%;
 }
 
 body:not(.small) .desc {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 body:not(.small) .slide img {
-	width: 40vw;
+  width: 40vw;
 }
 
 body:not(.small) .description {
-	margin-left: 30px;
-	width: 300px;
+  margin-left: 30px;
+  width: 300px;
 }
 
 body.small ul {
-	padding-left: 0px;
+  padding-left: 0px;
 }
 
 body.small .slides {
-	width: 90%;
-	margin-left: 5%;
+  width: 90%;
+  margin-left: 5%;
 }
 
 .description {
-	flex-shrink: 0;
-	text-align: left;
+  flex-shrink: 0;
+  text-align: left;
 }
 
 body.small .description {
-	padding:0 0 0 15px;
+  padding:0 0 0 15px;
 }

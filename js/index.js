@@ -46,7 +46,7 @@ function check(media) {
   if (media.matches) {
     document.body.children[0].classList.add("small");
     document.body.classList.add("small");
-	  small = true;
+    small = true;
   } else {
     document.body.children[0].classList.remove("small");
     document.body.classList.remove("small");
@@ -62,8 +62,8 @@ check(minSize);
 minSize.addListener(check);
 
 function browser() {
-	u = navigator.userAgent;
-	return u.indexOf("Firefox") > -1 ? "Firefox" : u.indexOf("OP") > -1 ? "Opera" : u.indexOf("Edg") > -1 ? "Edge" : u.indexOf("Chrome") > -1 ? "Chrome" : !!window.chrome ? "Chromium based browsers" : navigator.userAgent.indexOf("Safari") > -1 ? "Safari" : null;
+  u = navigator.userAgent;
+  return u.indexOf("Firefox") > -1 ? "Firefox" : u.indexOf("OP") > -1 ? "Opera" : u.indexOf("Edg") > -1 ? "Edge" : u.indexOf("Chrome") > -1 ? "Chrome" : !!window.chrome ? "Chromium based browsers" : navigator.userAgent.indexOf("Safari") > -1 ? "Safari" : null;
 }
 
 //add get fastforward for browser button
