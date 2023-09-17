@@ -1,5 +1,5 @@
 bypassList = {}
-fetch("https://raw.githubusercontent.com/FastForwardTeam/FastForward/master/docs/Bypassed.md").then((response) => {
+fetch("https://raw.githubusercontent.com/FastForwardTeam/FastForward/main/docs/Bypassed.md").then((response) => {
   response.text().then((data) => {
     data = data.split("\n");
     data.splice(0, 16);
