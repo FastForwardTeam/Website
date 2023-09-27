@@ -23,11 +23,8 @@ function nextPage(currentPage) {
 
 function loadEndPageContent() {
   instructions = {
-    "Firefox" : `<p>Unfortunately, FastForward was removed from the Firefox Store. You will have to manually install it instead.</p>
-    Manually Installing FastForward:<br>
-    1. Download the xpi file from <a href="https://github.com/FastForwardTeam/FastForward/releases/download/0.2237/fastforwardteam-0.2237.xpi">this link</a>. (this is for the mv2 version of the extension, the mv3 version will be available soon.)<br>
-    2. Click continue to installation, and then click add.
-    FastForward should now be installed!`,
+    "Firefox" : `<p>FastForward is available on the addons.mozilla.org!</p>
+    <a href="https://addons.mozilla.org/en-US/firefox/addon/fastforwardteam/">Install FastForward</a>`,
 
     "Edge" : `<p>FastForward is available on the Microsoft Edge Addons Store!</p>
     <a href="https://microsoftedge.microsoft.com/addons/detail/FastForward/ldcclmkclhomnpcnccgbgleikchbnecl/">Install FastForward</a>`,
