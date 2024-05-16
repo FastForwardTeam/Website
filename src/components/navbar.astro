@@ -4,10 +4,7 @@ import { Image } from "astro:assets";
 import Container from "./Container.astro";
 ---
 
-<div
-  id="navbar"
-  class="w-full sticky top-0 transition-colors animate__animated animate__fadeInDown"
->
+<div id="navbar" class="w-full sticky top-0 transition-colors duration-500 ">
   <Container class="h-16 flex items-center justify-between">
     <div class="flex items-center gap-1">
       <Image
@@ -17,22 +14,37 @@ import Container from "./Container.astro";
         height={40}
         loading={"eager"}
       />
-      <span class="text-[15px] font-light">FastForward</span>
+      <span class="text-[15px] font-light max-sm:hidden">FastForward</span>
     </div>
-    <nav class="flex max-sm:hidden text-white gap-8 text-sm">
+    <nav class="flex text-white gap-8 text-sm max-sm:font-bold max-sm:flex-col max-sm:text-center max-sm:text-2xl max-sm:justify-center max-sm:fixed max-sm:top-16 max-sm:left-[200%] duration-500 transition-[left,transform,background] max-sm:h-[calc(100dvh-4rem)] max-sm:w-screen max-sm:z-50 max-sm:bg-neutral-950 max-sm:skew-x-6">
       <a href="/">Home</a>
       <a href="/faq">FAQ</a>
       <a href="/contact">Contact</a>
       <a href="/checker">Bypass Checker</a>
+      <a
+        href="https://github.com/fastforwardteam"
+        target="_blank"
+        rel="noopener noreferrer">Github</a
+      >
     </nav>
-    <button class="hidden max-sm:flex text-white">
+    <button id="buttonMenu"class="hidden max-sm:flex text-white">
       <IconMenu />
     </button>
   </Container>
 </div>
 
+<style lang="scss">
+  .menuActive{
+    @apply bg-neutral-900;
+    nav {
+      @apply bg-neutral-900 left-0 skew-x-0;
+    }
+  }
+</style>
+
 <script>
   let navbar = document.getElementById("navbar");
+  let buttonMenu = document.getElementById("buttonMenu");
 
   if (navbar) {
     const checkScroll = () => {
@@ -48,5 +60,16 @@ import Container from "./Container.astro";
     window.addEventListener("scroll", () => {
       checkScroll();
     });
+  }
+
+  if(buttonMenu) {
+    buttonMenu.addEventListener("click", (e) => {
+      e.preventDefault()
+      navbar?.classList.toggle("menuActive")
+    })
+
+    window.addEventListener("resize", () => {
+      navbar?.classList.remove("menuActive")
+    })
   }
 </script>

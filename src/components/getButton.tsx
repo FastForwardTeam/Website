@@ -1,5 +1,6 @@
-import { useBrowserInfo } from "../hooks/useBrowserInfo";
+import { IconDownload } from "@tabler/icons-react";
 import JsonExtension from "../assets/urlWebStoreExtensions.json";
+import { useBrowserInfo } from "../hooks/useBrowserInfo";
 
 export const GetExtensionButton = () => {
   const { isDesktop, typeBrowser, isValidBrowser } = useBrowserInfo();
@@ -19,9 +20,12 @@ export const GetExtensionButton = () => {
     if (!isDesktop || !isValidBrowser) return <p>View supported browsers</p>;
 
     return (
-      <p>
-        Get for <span className="capitalize">{adjustedName}</span>
-      </p>
+      <div className="flex gap-3">
+        <IconDownload/>
+        <p>
+          Get for <span className="capitalize">{adjustedName}</span>
+        </p>
+      </div>
     );
   };
 
