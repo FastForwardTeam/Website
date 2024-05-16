@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+---
+
+<div
+  id="loading"
+  class="fixed top-0 left-0 bg-neutral-950 w-screen h-screen z-50 transition-opacity flex items-center justify-center flex-col"
+>
+  <Image
+    src="/favicon/logo.png"
+    alt="logo"
+    width={90}
+    height={90}
+    loading={"eager"}
+    class="animate__animated animate__rubberBand animate__infinite animate__slow "
+  />
+</div>

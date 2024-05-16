@@ -26,6 +26,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
+      animate.css:
+        specifier: ^4.1.1
+        version: 4.1.1
       astro:
         specifier: ^4.8.4
         version: 4.8.4(sass@1.77.1)(typescript@5.4.5)
@@ -866,6 +869,9 @@ packages:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  animate.css@4.1.1:
+    resolution: {integrity: sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==}
 
   ansi-align@3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}
@@ -3095,6 +3101,8 @@ snapshots:
   '@vscode/l10n@0.0.18': {}
 
   acorn@8.11.3: {}
+
+  animate.css@4.1.1: {}
 
   ansi-align@3.0.1:
     dependencies:
