@@ -138,19 +138,33 @@ const { title } = Astro.props;
 <style lang="scss" is:global>
   html {
     font-family: "Inter Variable", system-ui, sans-serif;
-
+    scrollbar-gutter: stable;
     @apply bg-neutral-950 text-white;
   }
 
-  * {
-    &::-webkit-scrollbar {
+  @supports selector(::-webkit-scrollbar) {
+    ::-webkit-scrollbar {
       width: 10px;
-      @apply bg-neutral-900;
+      @apply bg-neutral-900
     }
-    &::-webkit-scrollbar-thumb {
-      @apply bg-neutral-950;
-      border: 2px solid rgb(23, 23, 23);
+
+    ::-webkit-scrollbar-thumb {
       border-radius: 10px;
+      background-color: rgb(60, 60, 60);
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+      background-color: #666;
+    }
+
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    * {
+      scrollbar-color: rgb(60, 60, 60) rgb(24, 24, 24);
+      scrollbar-width: thin;
     }
   }
 </style>
