@@ -1,7 +1,7 @@
 ---
 import "@fontsource-variable/inter";
 import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
-import "animate.css";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -27,7 +27,7 @@ const { title } = Astro.props;
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#0a0a0a" />
     <link
       rel="preload"
       as="font"
@@ -129,23 +129,27 @@ const { title } = Astro.props;
     <meta name="msapplication-TileColor" content="#4261ED" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
     <title>{title}</title>
   </head>
   <body>
     <slot />
   </body>
 </html>
+
 <style lang="scss" is:global>
   html {
     font-family: "Inter Variable", system-ui, sans-serif;
     scrollbar-gutter: stable;
+  }
+  body {
     @apply bg-neutral-950 text-white;
   }
 
   @supports selector(::-webkit-scrollbar) {
     ::-webkit-scrollbar {
       width: 10px;
-      @apply bg-neutral-900
+      @apply bg-neutral-900;
     }
 
     ::-webkit-scrollbar-thumb {
@@ -158,7 +162,6 @@ const { title } = Astro.props;
     ::-webkit-scrollbar-thumb:active {
       background-color: #666;
     }
-
   }
 
   @supports not selector(::-webkit-scrollbar) {

@@ -45,35 +45,35 @@ import Container from "./Container.astro";
 </style>
 
 <script>
-  let navbar = document.getElementById("navbar");
-  let buttonMenu = document.getElementById("buttonMenu");
+  document.addEventListener("astro:page-load", () => {
+    let navbar = document.getElementById("navbar");
+    let buttonMenu = document.getElementById("buttonMenu");
 
-  if (navbar) {
-    const checkScroll = () => {
-      if (window.scrollY > 0) {
-        navbar.classList.add("bg-neutral-900");
-      } else {
-        navbar.classList.remove("bg-neutral-900");
-      }
-    };
+    if (navbar && buttonMenu) {
+      const checkScroll = () => {
+        if (window.scrollY > 0) {
+          navbar.classList.add("bg-neutral-900");
+        } else {
+          navbar.classList.remove("bg-neutral-900");
+        }
+      };
 
-    checkScroll();
-
-    window.addEventListener("scroll", () => {
       checkScroll();
-    });
-  }
 
-  if (buttonMenu) {
-    buttonMenu.addEventListener("click", (e) => {
-      e.preventDefault();
-      navbar?.classList.toggle("menuActive");
-    });
+      window.addEventListener("scroll", () => {
+        checkScroll();
+      });
 
-    window.addEventListener("resize", () => {
-      if (window.innerWidth >= 640) {
-        navbar?.classList.remove("menuActive");
-      }
-    });
-  }
+      buttonMenu.addEventListener("click", (e) => {
+        e.preventDefault();
+        navbar.classList.toggle("menuActive");
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 640) {
+          navbar.classList.remove("menuActive");
+        }
+      });
+    }
+  });
 </script>
