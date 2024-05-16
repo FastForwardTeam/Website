@@ -1,0 +1,22 @@
+---
+import type { Icon, IconProps } from "@tabler/icons-react";
+import type { ReactNode } from "react";
+
+interface Props {
+  Icon: (props: IconProps) => ReactNode;
+  title: string;
+  description: string;
+}
+
+const { Icon, title, description } = Astro.props;
+---
+
+<div class="flex flex-col gap-2">
+  <Icon className="w-8 h-8 " />
+  <div>
+    <h3 class="text-lg">{title}</h3>
+    <p class="text-pretty text-white/60">
+      {description}
+    </p>
+  </div>
+</div>

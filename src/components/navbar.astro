@@ -1,0 +1,20 @@
+---
+import Container from "./Container.astro";
+import { Image } from "astro:assets";
+import { IconMenu } from "@tabler/icons-react";
+---
+
+<div class="w-full sticky top-0 backdrop-blur-xl bg-neutral-950/50">
+  <Container class="h-16 flex items-center justify-between">
+    <Image src="/img/branding.webp" alt="logo" width={140} height={40} loading={"eager"} />
+    <nav class="flex max-sm:hidden text-white gap-8 text-sm">
+      <a href="/">Home</a>
+      <a href="/faq">FAQ</a>
+      <a href="/contact">Contact</a>
+      <a href="/checker">Bypass Checker</a>
+    </nav>
+    <button class="hidden max-sm:flex text-white">
+      <IconMenu />
+    </button>
+  </Container>
+</div>
