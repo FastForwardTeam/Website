@@ -4,9 +4,15 @@ import { Image } from "astro:assets";
 import { IconMenu } from "@tabler/icons-react";
 ---
 
-<div class="w-full sticky top-0 backdrop-blur-xl bg-neutral-950/50">
+<div class="w-full sticky top-0 backdrop-blur-xl">
   <Container class="h-16 flex items-center justify-between">
-    <Image src="/img/branding.webp" alt="logo" width={140} height={40} loading={"eager"} />
+    <Image
+      src="/img/branding.webp"
+      alt="logo"
+      width={140}
+      height={40}
+      loading={"eager"}
+    />
     <nav class="flex max-sm:hidden text-white gap-8 text-sm">
       <a href="/">Home</a>
       <a href="/faq">FAQ</a>
