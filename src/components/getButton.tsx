@@ -30,7 +30,7 @@ export const GetExtensionButton = () => {
     <a
       href={GetURL()}
       target="_blank"
-      className="px-6 border border-purple-900 h-12 rounded-full hover:bg-purple-950 transition-colors flex items-center justify-center"
+      className="px-6 border border-purple-900 h-12 rounded-full hover:bg-purple-950 transition-colors flex items-center justify-center animate__animated animate__fadeIn"
     >
       {renderButton()}
     </a>

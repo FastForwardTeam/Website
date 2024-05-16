@@ -1,18 +1,24 @@
 ---
-import Container from "./Container.astro";
-import { Image } from "astro:assets";
 import { IconMenu } from "@tabler/icons-react";
+import { Image } from "astro:assets";
+import Container from "./Container.astro";
 ---
 
-<div class="w-full sticky top-0 bg-neutral-950">
+<div
+  id="navbar"
+  class="w-full sticky top-0 transition-colors animate__animated animate__fadeInDown"
+>
   <Container class="h-16 flex items-center justify-between">
-    <Image
-      src="/img/branding.webp"
-      alt="logo"
-      width={140}
-      height={40}
-      loading={"eager"}
-    />
+    <div class="flex items-center gap-1">
+      <Image
+        src="/img/logo.png"
+        alt="logo"
+        width={40}
+        height={40}
+        loading={"eager"}
+      />
+      <span class="text-[15px] font-light">FastForward</span>
+    </div>
     <nav class="flex max-sm:hidden text-white gap-8 text-sm">
       <a href="/">Home</a>
       <a href="/faq">FAQ</a>
@@ -24,3 +30,23 @@ import { IconMenu } from "@tabler/icons-react";
     </button>
   </Container>
 </div>
+
+<script>
+  let navbar = document.getElementById("navbar");
+
+  if (navbar) {
+    const checkScroll = () => {
+      if (window.scrollY > 0) {
+        navbar.classList.add("bg-neutral-900");
+      } else {
+        navbar.classList.remove("bg-neutral-900");
+      }
+    };
+
+    checkScroll();
+
+    window.addEventListener("scroll", () => {
+      checkScroll();
+    });
+  }
+</script>

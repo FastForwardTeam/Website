@@ -1,16 +1,16 @@
 ---
+import {
+  IconBan,
+  IconClock,
+  IconShield,
+  IconSpyOff,
+} from "@tabler/icons-react";
 import Container from "../components/Container.astro";
 import FeatureCard from "../components/featureCard.astro";
+import Footer from "../components/footer.astro";
 import { GetExtensionButton } from "../components/getButton";
 import Navbar from "../components/navbar.astro";
-import Footer from "../components/footer.astro";
 import Layout from "../layouts/Layout.astro";
-import {
-  IconClock,
-  IconBan,
-  IconSpyOff,
-  IconShield,
-} from "@tabler/icons-react";
 ---
 
 <Layout title="Welcome to FastForward">
@@ -55,5 +55,5 @@ import {
       </div>
     </Container>
   </main>
-  <Footer/>
+  <Footer />
 </Layout>

@@ -1,5 +1,6 @@
 ---
-import Loading from "../components/Loading.astro";
+import "@fontsource-variable/inter";
+import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
 import "animate.css";
 
 interface Props {
@@ -26,9 +27,14 @@ const { title } = Astro.props;
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <meta name="author" content="AliahX" />
-    <meta name="theme-color" content="#018df0" />
-    <meta name="image" content="img/branding.png" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={interWoff2}
+      crossorigin
+    />
 
     <meta property="og:title" content="Home" />
     <meta property="og:type" content="website" />
@@ -122,13 +128,6 @@ const { title } = Astro.props;
     />
     <meta name="msapplication-TileColor" content="#4261ED" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -137,8 +136,9 @@ const { title } = Astro.props;
   </body>
 </html>
 <style lang="scss" is:global>
-  body {
-    font-family: "Inter", sans-serif;
+  html {
+    font-family: "Inter Variable", system-ui, sans-serif;
+
     @apply bg-neutral-950 text-white;
   }
 
@@ -154,17 +154,3 @@ const { title } = Astro.props;
     }
   }
 </style>
-
-<!-- <script>
-  window.addEventListener("load", function () {
-    let loading = this.document.getElementById("loading");
-
-    if (loading) {
-      loading.style.opacity = "0";
-
-      this.setTimeout(() => {
-        loading.style.display = "none";
-      }, 150);
-    }
-  });
-</script> -->
