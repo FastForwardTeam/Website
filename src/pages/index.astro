@@ -1,6 +1,10 @@
 ---
 import {
   IconBan,
+  IconBrandChrome,
+  IconBrandEdge,
+  IconBrandFirefox,
+  IconBrandOpera,
   IconClock,
   IconShield,
   IconSpyOff,
@@ -11,11 +15,32 @@ import Footer from "../components/footer.astro";
 import { GetExtensionButton } from "../components/getButton";
 import Navbar from "../components/navbar.astro";
 import Layout from "../layouts/Layout.astro";
+import urlWebStoreExtensions from "../assets/urlWebStoreExtensions.json";
+
+const browserCompat = [
+  {
+    Icon: IconBrandChrome,
+    type: "chrome",
+  },
+
+  {
+    Icon: IconBrandFirefox,
+    type: "firefox",
+  },
+  {
+    Icon: IconBrandEdge,
+    type: "edge",
+  },
+  {
+    Icon: IconBrandOpera,
+    type: "chrome",
+  },
+];
 ---
 
-<Layout class="overflow-x-hidden" title="Welcome to FastForward">
+<Layout title="Welcome to FastForward">
   <Navbar />
-  <header class="w-full h-[calc(100vh-4rem)] pb-20">
+  <header class=" w-full h-screen pb-20 ">
     <Container
       class="h-full flex items-center justify-center flex-col gap-2 text-center"
     >
@@ -24,12 +49,25 @@ import Layout from "../layouts/Layout.astro";
         Don't waste time with compliance
       </h3>
       <GetExtensionButton client:load />
+      <div class="flex items-center gap-2 mt-1">
+        {
+          browserCompat.map(({ Icon, type }) => {
+            let url =
+              urlWebStoreExtensions[type as keyof typeof urlWebStoreExtensions];
+            return (
+              <a
+                href={url}
+                class="hover:scale-125 transition-transform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon className="w-7 h-7" />
+              </a>
+            );
+          })
+        }
+      </div>
     </Container>
-    <div
-      class="background absolute top-0 left-0 w-full h-screen flex items-center justify-center -z-10"
-    >
-      <div class="gradient transition-[width,height]"></div>
-    </div>
   </header>
   <main class="w-full">
     <Container class="py-24">
@@ -62,6 +100,13 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </Container>
   </main>
+  <div class="absolute top-0 left-0 h-[200vh] w-full overflow-hidden -z-10">
+    <div
+      class="background absolute top-0 left-0 w-full h-screen flex items-center justify-center -z-10"
+    >
+      <div class="gradient transition-[width,height]"></div>
+    </div>
+  </div>
   <Footer />
 </Layout>
 
