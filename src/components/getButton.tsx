@@ -14,14 +14,14 @@ export const GetExtensionButton = () => {
     const adjustedName = typeBrowser === "edge-chromium" ? "edge" : typeBrowser;
 
     if (!adjustedName) {
-      return <span className="w-32 h-4 rounded-md bg-purple-900/30"></span>;
+      return <span className="w-32 h-4 rounded-md bg-white/30"></span>;
     }
 
     if (!isDesktop || !isValidBrowser) return <p>View supported browsers</p>;
 
     return (
       <div className="flex gap-3">
-        <IconDownload/>
+        <IconDownload />
         <p>
           Get for <span className="capitalize">{adjustedName}</span>
         </p>
@@ -33,7 +33,7 @@ export const GetExtensionButton = () => {
     <a
       href={GetURL()}
       target="_blank"
-      className="px-6 border border-purple-900 h-12 rounded-full hover:bg-purple-950 transition-colors flex items-center justify-center "
+      className="px-6 border border-white h-12 rounded-full hover:bg-white/10 transition-colors flex items-center justify-center"
     >
       {renderButton()}
     </a>

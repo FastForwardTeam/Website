@@ -17,7 +17,7 @@ import Container from "./Container.astro";
       <span class="text-[15px] font-light max-sm:hidden">FastForward</span>
     </div>
     <nav
-      class="flex text-white gap-8 text-sm max-sm:font-bold max-sm:flex-col max-sm:text-center max-sm:text-2xl max-sm:pt-20 max-sm:fixed max-sm:top-16 max-sm:left-[200%] duration-500 transition-[left,transform,background] max-sm:h-[calc(100vh-4rem)] max-sm:w-screen max-sm:z-50 max-sm:bg-neutral-950 max-sm:skew-x-6"
+      class="flex text-white gap-8 text-sm max-sm:bg-neutral-950/50 max-sm:backdrop-blur-lg max-sm:font-bold max-sm:flex-col max-sm:text-center max-sm:text-2xl max-sm:pt-20 max-sm:fixed max-sm:top-16 max-sm:left-[200%] duration-500 transition-[left,transform,background] max-sm:h-[calc(100vh-4rem)] max-sm:w-screen max-sm:z-50 max-sm:skew-x-6"
     >
       <a href="/">Home</a>
       <a href="/faq">FAQ</a>
@@ -37,9 +37,9 @@ import Container from "./Container.astro";
 
 <style lang="scss">
   .menuActive {
-    @apply bg-neutral-900;
+    @apply backdrop-blur-lg bg-neutral-950/50;
     nav {
-      @apply bg-neutral-900 left-0 skew-x-0;
+      @apply skew-x-0 left-0 backdrop-blur-lg;
     }
   }
 </style>
@@ -52,9 +52,11 @@ import Container from "./Container.astro";
     if (navbar && buttonMenu) {
       const checkScroll = () => {
         if (window.scrollY > 0) {
-          navbar.classList.add("bg-neutral-900");
+          navbar.classList.add("backdrop-blur-lg");
+          navbar.classList.add("bg-neutral-950/50");
         } else {
-          navbar.classList.remove("bg-neutral-900");
+          navbar.classList.remove("backdrop-blur-lg");
+          navbar.classList.remove("bg-neutral-950/50");
         }
       };
 

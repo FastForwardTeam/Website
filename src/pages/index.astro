@@ -13,7 +13,7 @@ import Navbar from "../components/navbar.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to FastForward">
+<Layout class="overflow-x-hidden" title="Welcome to FastForward">
   <Navbar />
   <header class="w-full h-[calc(100vh-4rem)] pb-20">
     <Container
@@ -25,13 +25,20 @@ import Layout from "../layouts/Layout.astro";
       </h3>
       <GetExtensionButton client:load />
     </Container>
+    <div
+      class="background absolute top-0 left-0 w-full h-screen flex items-center justify-center -z-10"
+    >
+      <div class="gradient transition-[width,height]"></div>
+    </div>
   </header>
   <main class="w-full">
     <Container class="py-24">
       <h2 class="text-3xl max-md:text-2xl text-center mb-20">
         What is FastForward?
       </h2>
-      <div class="grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:text-center">
+      <div
+        class="grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:text-center"
+      >
         <FeatureCard
           Icon={IconClock}
           title="Saves time"
@@ -57,3 +64,36 @@ import Layout from "../layouts/Layout.astro";
   </main>
   <Footer />
 </Layout>
+
+<style lang="scss">
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .background {
+    .gradient {
+      --size: 750px;
+      --speed: 80s;
+      --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+      width: var(--size);
+      height: var(--size);
+      filter: blur(calc(var(--size) / 5));
+      background: linear-gradient(hsl(222, 100%, 50%), hsl(268, 100%, 50%));
+      animation: rotate var(--speed) var(--easing) infinite;
+      border-radius: 30% 80% 70% 80% / 50% 30% 50% 70%;
+
+      @media (min-width: 720px) {
+        --size: 70vw;
+      }
+      @media (min-width: 1280px) {
+        --size: 50vw;
+      }
+    }
+  }
+</style>
