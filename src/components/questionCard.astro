@@ -1,0 +1,21 @@
+---
+interface Props {
+  question: string;
+  reply: string | (() => JSX.Element);
+}
+
+const { question, reply: Reply } = Astro.props;
+
+---
+
+<details class="border border-neutral-900 rounded py-2 px-4">
+  <summary class="text-xl">
+    {question}
+  </summary>
+  <p class="mt-2 text-neutral-300 text-sm">
+    {typeof Reply === "function" ? <Reply /> : Reply}
+  </p>
+</details>
+
+
+

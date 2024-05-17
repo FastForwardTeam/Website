@@ -1,67 +1,24 @@
 ---
+import Container from "../components/Container.astro";
 import Navbar from "../components/navbar.astro";
+import QuestionCard from "../components/questionCard.astro";
 import Layout from "../layouts/Layout.astro";
-
-
+import Footer from "../components/footer.astro";
+import faq from "../assets/faq"
 ---
 
-
 <Layout title="FAQ">
-    <Navbar/>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+  <Navbar />
+  <main class="mt-24 min-h-screen">
+    <Container>
+      <h1 class="text-2xl text-center">Frequently Asked Questions</h1>
+
+      <div class="mt-7 flex flex-col gap-2">
+        {
+          faq.map((question) => <QuestionCard question={question.question} reply={question.reply} />)
+        }
+      </div>
+    </Container>
+  </main>
+  <Footer/>
 </Layout>
