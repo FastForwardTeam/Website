@@ -1,0 +1,46 @@
+---
+import Container from "../components/Container.astro";
+import Navbar from "../components/navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/footer.astro";
+import { IconBrandDiscord } from "@tabler/icons-react";
+---
+
+<Layout title="Contact us">
+  <Navbar />
+  <Container class="min-h-screen flex flex-col items-center justify-center gap-2 pb-20">
+    <h1 class="text-2xl text-center">Contact us</h1>
+    <p class="text-center">
+      If you have any questions you can join our discord and talk to us
+      directly.
+    </p>
+    <br>
+    <form class="w-full max-w-2xl flex flex-col gap-2">
+      <input
+        class="w-full h-10 rounded-lg bg-neutral-900 px-3"
+        type="text"
+        placeholder="Subject"
+      />
+      <textarea
+        class="w-full min-h-40 h-10 rounded-lg bg-neutral-900 px-3"
+        placeholder="Message"></textarea>
+
+      <div class="flex items-center justify-center mt-5 gap-4 w-full">
+        <button class="flex gap-2 items-center border px-4 py-2 rounded-lg">
+          Send message
+        </button>
+        <span>or</span>
+        <a
+          class="flex gap-2 items-center border px-4 py-2 rounded-lg"
+          href="https://discord.com/invite/RSAf7b5njt"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IconBrandDiscord />
+          <p>Discord</p>
+        </a>
+      </div>
+    </form>
+  </Container>
+  <Footer />
+</Layout>
