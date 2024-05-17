@@ -16,6 +16,7 @@ import { GetExtensionButton } from "../components/getButton";
 import Navbar from "../components/navbar.astro";
 import Layout from "../layouts/Layout.astro";
 import urlWebStoreExtensions from "../assets/urlWebStoreExtensions.json";
+import { HomeBackground } from "../components/background";
 
 const browserCompat = [
   {
@@ -40,7 +41,8 @@ const browserCompat = [
 
 <Layout title="Welcome to FastForward">
   <Navbar />
-  <header class=" w-full h-screen pb-20 ">
+  <HomeBackground client:only />
+  <header class="w-full h-[calc(100vh-4rem)] pb-20">
     <Container
       class="h-full flex items-center justify-center flex-col gap-2 text-center"
     >
@@ -100,45 +102,5 @@ const browserCompat = [
       </div>
     </Container>
   </main>
-  <div class="absolute top-0 left-0 h-[200vh] w-full overflow-hidden -z-10">
-    <div
-      class="background absolute top-0 left-0 w-full h-screen flex items-center justify-center -z-10"
-    >
-      <div class="gradient transition-[width,height]"></div>
-    </div>
-  </div>
   <Footer />
 </Layout>
-
-<style lang="scss">
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  .background {
-    .gradient {
-      --size: 750px;
-      --speed: 80s;
-      --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-
-      width: var(--size);
-      height: var(--size);
-      filter: blur(calc(var(--size) / 5));
-      background: linear-gradient(hsl(222, 100%, 50%), hsl(268, 100%, 50%));
-      animation: rotate var(--speed) var(--easing) infinite;
-      border-radius: 30% 80% 70% 80% / 50% 30% 50% 70%;
-
-      @media (min-width: 720px) {
-        --size: 70vw;
-      }
-      @media (min-width: 1280px) {
-        --size: 50vw;
-      }
-    }
-  }
-</style>
