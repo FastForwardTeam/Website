@@ -9,8 +9,5 @@ export default defineConfig({
   integrations: [react(), tailwind()],
   server: {
     port: 80,
-  },
-  vite: {
-    plugins: [million.vite({ mode: "react", auto: true })]
   }
 });
