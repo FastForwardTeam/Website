@@ -1,0 +1,106 @@
+---
+import {
+  IconBan,
+  IconBrandChrome,
+  IconBrandEdge,
+  IconBrandFirefox,
+  IconBrandOpera,
+  IconClock,
+  IconShield,
+  IconSpyOff,
+} from "@tabler/icons-react";
+import Container from "../components/Container.astro";
+import FeatureCard from "../components/featureCard.astro";
+import Footer from "../components/footer.astro";
+import { GetExtensionButton } from "../components/getButton";
+import Navbar from "../components/navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import urlWebStoreExtensions from "../assets/urlWebStoreExtensions.json";
+import { HomeBackground } from "../components/background";
+
+const browserCompat = [
+  {
+    Icon: IconBrandChrome,
+    type: "chrome",
+  },
+
+  {
+    Icon: IconBrandFirefox,
+    type: "firefox",
+  },
+  {
+    Icon: IconBrandEdge,
+    type: "edge",
+  },
+  {
+    Icon: IconBrandOpera,
+    type: "chrome",
+  },
+];
+---
+
+<Layout title="Welcome to FastForward">
+  <Navbar />
+  <HomeBackground client:load />
+  <header class="w-full h-[calc(100vh-4rem)]">
+    <Container
+      class="h-full flex items-center justify-center flex-col gap-2 text-center"
+    >
+      <h1 class="text-6xl max-md:text-5xl font-bold">FastForward</h1>
+      <h3 class="text-xl max-md:text-lg mb-4">
+        Don't waste time with compliance
+      </h3>
+      <GetExtensionButton client:load />
+      <div class="flex items-center gap-2 mt-1">
+        {
+          browserCompat.map(({ Icon, type }) => {
+            let url =
+              urlWebStoreExtensions[type as keyof typeof urlWebStoreExtensions];
+            return (
+              <a
+                href={url}
+                class="hover:scale-125 transition-transform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon className="w-7 h-7" />
+              </a>
+            );
+          })
+        }
+      </div>
+    </Container>
+  </header>
+  <main class="w-full">
+    <Container class="py-24">
+      <h2 class="text-3xl max-md:text-2xl text-center mb-20">
+        What is FastForward?
+      </h2>
+      <div
+        class="grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:text-center"
+      >
+        <FeatureCard
+          Icon={IconClock}
+          title="Saves time"
+          description="Circumvent sites which make you wait for 5 - 60 seconds while showing you ads"
+        />
+        <FeatureCard
+          Icon={IconBan}
+          title="Goodbye oblations"
+          description="Bypass sites that make you do something such as subscribing to a youtube channel, or following somebody on social media"
+        />
+        <FeatureCard
+          Icon={IconSpyOff}
+          title="Goodbye trackers"
+          description="Block sites that track information about you"
+        />
+        <FeatureCard
+          Icon={IconShield}
+          title="Protect yourself"
+          description="It also helps to prevent your IP address from being logged by sites by blocking them."
+        />
+      </div>
+    </Container>
+  </main>
+  <Footer />
+</Layout>

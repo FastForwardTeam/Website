@@ -1,0 +1,206 @@
+---
+import "animate.css"
+import "@fontsource-variable/inter";
+import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+  title: string;
+  class?: string
+}
+
+const { title, ...props } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="keywords"
+      content="fastforward, fast, forward, fast forward, adskip, skip, ad, skip ad, adblock, linkvertise, extension, chrome, opera, how do i block, how to block, wait for ad, not wait for ad, universal, universal bypass, bypass, bypass ads, icallnadddjmdinamnolclfjanhfoafe, adf.ly, adfly, show.co, showco, show, sub2unlock.com, sub2unlockcom, bit.ly ,bitly, t.co, tco"
+    />
+    <meta
+      name="description"
+      content='Don&apos;t waste time with compliance. Use FastForward to skip annoying URL "shorteners".'
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={interWoff2}
+      crossorigin
+    />
+
+    <meta property="og:title" content="Home" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fastforward.team" />
+    <meta property="og:image" content="img/branding.png" />
+    <meta property="og:site_name" content="FastForward" />
+    <meta
+      property="og:description"
+      content='Don&apos;t waste time with compliance. Use FastForward to skip annoying URL "shorteners".'
+    />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@FastForwardTeam" />
+    <meta name="twitter:title" content="FastForward" />
+    <meta
+      name="twitter:description"
+      content='Don&apos;t waste time with compliance. Use FastForward to skip annoying URL "shorteners".'
+    />
+    <meta name="twitter:image" content="img/branding.png" />
+    <meta name="twitter:url" content="https://fastforward.team" />
+    <meta name="twitter:image:alt" content="FastForward" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#4261ED" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+    <title>{title}</title>
+  </head>
+  <body class={props.class}>
+    <slot />
+  </body>
+</html>
+
+<style lang="scss" is:global>
+  html {
+    font-family: "Inter Variable", system-ui, sans-serif;
+    scrollbar-gutter: stable;
+  }
+  body {
+    @apply bg-neutral-950 text-white;
+  }
+
+  @supports selector(::-webkit-scrollbar) {
+    ::-webkit-scrollbar {
+      width: 10px;
+      @apply bg-neutral-900;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: rgb(60, 60, 60);
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+      background-color: #666;
+    }
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    * {
+      scrollbar-color: rgb(60, 60, 60) rgb(24, 24, 24);
+      scrollbar-width: thin;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .background {
+    .gradient {
+      --size: 750px;
+      --speed: 80s;
+      --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+      width: var(--size);
+      height: var(--size);
+      filter: blur(calc(var(--size) / 5));
+      background: linear-gradient(hsl(222, 100%, 50%),hsla(249, 100%, 50%, 0.281), hsl(268, 100%, 50%));
+      animation: rotate var(--speed) var(--easing) infinite;
+      border-radius: 30% 80% 70% 80% / 50% 30% 50% 70%;
+
+      @media (min-width: 720px) {
+        --size: 70vw;
+      }
+      @media (min-width: 1280px) {
+        --size: 50vw;
+      }
+    }
+  }
+</style>

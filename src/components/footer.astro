@@ -1,0 +1,58 @@
+---
+import Container from "./Container.astro";
+import {
+  IconBrandDiscordFilled,
+  IconBrandGithubFilled,
+} from "@tabler/icons-react";
+---
+
+<footer class="bg-neutral-900">
+  <Container class="p-10">
+    <div class="flex flex-col max-sm:items-center">
+      <h2 class="text-lg mb-2">Contact us</h2>
+      <div class="flex flex-col gap-1 text-white/70 max-sm:items-center">
+        <a
+          href="https://discord.com/invite/RSAf7b5njt"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex gap-2 text-sm hover:text-white transition-colors"
+        >
+          <IconBrandDiscordFilled className="w-5 h-5" /> Discord
+        </a>
+        <a
+          href="https://github.com/FastForwardTeam/FastForward/issues/new"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex gap-2 text-sm hover:text-white transition-colors"
+        >
+          <IconBrandGithubFilled className="w-5 h-5" /> Create an issue
+        </a>
+      </div>
+    </div>
+  </Container>
+  <Container
+    class="flex justify-between text-sm py-5 text-white/70 transition-colors max-sm:flex-col max-sm:items-center max-sm:gap-4"
+  >
+    <a href="/privacy" class="hover:text-white">Privacy</a>
+    <p>
+      <span id="idCopyrigthYear"></span>
+      © FastForwardTeam with
+      <span class="text-red-500"> ❤ </span>
+      <a
+        href="https://github.com/ruxwez"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-red-500 transition-colors"
+      >
+        Ruxwez
+      </a>
+    </p>
+  </Container>
+</footer>
+
+<script>
+  let copyrigth = document.getElementById("idCopyrigthYear");
+  if (copyrigth) {
+    copyrigth.innerHTML = new Date().getFullYear().toString();
+  }
+</script>

@@ -1,0 +1,96 @@
+---
+import { IconMenu } from "@tabler/icons-react";
+import { Image } from "astro:assets";
+import Container from "./Container.astro";
+---
+
+<div id="navbar" class="w-full fixed top-0 transition-colors duration-500">
+  <Container class="h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-1">
+      <Image
+        src="/img/logo.png"
+        alt="logo"
+        width={40}
+        height={40}
+        loading={"eager"}
+      />
+      <span class="text-[15px] font-light max-sm:hidden">FastForward</span>
+    </a>
+    <nav
+      class="flex text-white gap-8 text-sm max-sm:bg-neutral-950/95 max-sm:font-bold max-sm:flex-col max-sm:text-center max-sm:text-2xl max-sm:pt-20 max-sm:fixed max-sm:top-16 max-sm:left-[200%] duration-500 transition-[left,transform,background] max-sm:h-[calc(100vh-4rem)] max-sm:w-screen max-sm:z-50 max-sm:skew-x-6"
+    >
+      <a href="/">Home</a>
+      <a href="/faq">FAQ</a>
+      <a href="/contact">Contact</a>
+      <a href="/checker">Bypass Checker</a>
+      <a
+        href="https://github.com/fastforwardteam"
+        target="_blank"
+        rel="noopener noreferrer">Github</a
+      >
+    </nav>
+    <button id="buttonMenu" class="hidden max-sm:flex text-white">
+      <IconMenu />
+    </button>
+  </Container>
+</div>
+
+<style lang="scss">
+  .scrollActive {
+    @apply bg-neutral-950/50 backdrop-blur-lg;
+  }
+
+  .menuActive {
+    @apply bg-neutral-950/95;
+    nav {
+      @apply skew-x-0 left-0;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    let navbar = document.getElementById("navbar");
+    let buttonMenu = document.getElementById("buttonMenu");
+
+    if (navbar && buttonMenu) {
+      const checkScroll = () => {
+        if (window.scrollY > 0) {
+          navbar.classList.add("scrollActive");
+        } else {
+          navbar.classList.remove("scrollActive");
+        }
+      };
+      
+      checkScroll()
+
+      let timeOutScroll: number;
+      let isActive: boolean = false;
+
+      window.addEventListener("scroll", () => {
+        clearTimeout(timeOutScroll);
+
+        if (!isActive) {
+          isActive = true
+          checkScroll()
+        }
+
+        timeOutScroll = setTimeout(() => {
+          isActive = false
+          checkScroll()
+        }, 100);
+      });
+
+      buttonMenu.addEventListener("click", (e) => {
+        e.preventDefault();
+        navbar.classList.toggle("menuActive");
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 640) {
+          navbar.classList.remove("menuActive");
+        }
+      });
+    }
+  });
+</script>
