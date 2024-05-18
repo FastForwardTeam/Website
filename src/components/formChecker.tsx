@@ -5,6 +5,15 @@ interface TableRow {
   status: string;
 }
 
+function getDomain(url: string): string {
+  try {
+      return new URL(url).hostname;
+  } catch (e) {
+      console.error(`Invalid URL: ${url}`);
+      return '';
+  }
+}
+
 export const FormChecker = () => {
   const [list, setList] = useState<TableRow[]>();
   const [url, setURL] = useState<string>("");
@@ -47,7 +56,7 @@ export const FormChecker = () => {
     setIsMV2Active(() => false)
     setIsMV3Active(() => false)
     
-    let listFilterWithURL = list?.filter((d) => d.url === url)
+    let listFilterWithURL = list?.filter((d) => getDomain(d.url) === getDomain(url))
 
     if(listFilterWithURL !== undefined && listFilterWithURL?.length >= 1) {
       setIsMV2Active(true)
