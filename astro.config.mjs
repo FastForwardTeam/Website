@@ -5,7 +5,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://ruxwez.github.io",
-  base: "fastforward",
+  site: "https://fastforward.ruxwez.dev",
   integrations: [react(), tailwind()]
 });
