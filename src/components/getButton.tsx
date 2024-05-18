@@ -17,8 +17,6 @@ export const GetExtensionButton = () => {
       return <span className="w-32 h-4 rounded-md bg-white/30"></span>;
     }
 
-    if (!isDesktop || !isValidBrowser) return <p>View supported browsers</p>;
-
     return (
       <div className="flex gap-3">
         <IconDownload />
@@ -29,11 +27,13 @@ export const GetExtensionButton = () => {
     );
   };
 
+  if (!isDesktop || !isValidBrowser) return "";
+
   return (
     <a
       href={GetURL()}
       target="_blank"
-      className="px-6 border border-white h-12 rounded-full hover:bg-white/10 transition-colors flex items-center justify-center"
+      className="px-6 border border-white h-12 rounded-full hover:bg-white/10 transition-colors flex items-center justify-center  animate__animated animate__fadeIn"
     >
       {renderButton()}
     </a>
