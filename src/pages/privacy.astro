@@ -1,0 +1,96 @@
+---
+import Container from "../components/Container.astro";
+import Navbar from "../components/navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/footer.astro";
+---
+
+<Layout title="Privacy Policy">
+  <Navbar />
+  <Container class="mt-24 min-h-screen">
+    <h1 class="text-4xl">Frequently Asked Questions</h1>
+    <br />
+    <div class="flex flex-col gap-4">
+      <div>
+        <h2 class="text-2xl max-md:text-2xl">What we collect</h2>
+        <p class="text-neutral-400">
+          FastForward does not collect any personally identifiable information
+          on its users. The only information collected is what is described
+          below, in the Auto updating and Crowd Bypass sections.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-2xl max-md:text-2xl">What we Share</h2>
+        <p class="text-neutral-400">
+          As FastForward does not collect any personally identifiable
+          information on its users, no personally identifiable information is
+          shared with any third parties.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-2xl max-md:text-2xl">Auto-updating</h2>
+        <p class="text-neutral-400">
+          This section does not apply to Firefox. In order to provide up-to-date
+          bypasses, FastForward sends a request to Github every hour, and if a
+          new commit is found, it will download the latest "injection script."
+          For this,
+          <a
+            class="text-blue-500 hover:text-blue-600"
+            href="https://help.github.com/en/github/site-policy/github-privacy-statement"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github's privacy policy
+          </a> applies.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-2xl max-md:text-2xl">Crowd Bypass</h2>
+        <p class="text-neutral-400">
+          When Crowd Bypass (Options {">"} "Give and take the destinations of unbypassable
+          shorteners.") is enabled, occasionally the extension will send requests
+          to our server.
+        </p>
+        <div class="py-4 text-neutral-400">
+          <li>
+            When you visit a known unbypassable shortener website, the URL is
+            sent so it can check against the database if someone else has
+            already reported its destination.
+          </li>
+          <li>
+            When you complete your visit on such a website, the URL and
+            destination URL are sent so it can be recorded for future visitors.
+          </li>
+          <li>
+            The URL of the unbypassable shortener website and the destination
+            are made available to other users of FastForward and applications
+            interfacing with the FastForward Crowd Bypass Server API.
+          </li>
+          <li>
+            A hashed version of your Public IP Address is also added to the
+            database, but is not shared. As it is hashed, it cannot be traced
+            back to you and is only used for spam protection.
+          </li>
+        </div>
+        <p class="text-neutral-400">
+          We store a hashed version of your IP address along with the
+          destination to prevent spam. We may record your user-agent and other
+          headers to analyse errors on our server. Access to this database is
+          restricted to only those developers and administrators who require it
+          for the purpose of maintenance. We never share this data with anyone
+          else. We use Cloudflare to protect and improve the performance of our
+          server. Their
+          <a
+            class="text-blue-500 hover:text-blue-600"
+            href="https://www.cloudflare.com/privacypolicy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            privacy policy
+          </a> applies to you as an "End User."
+        </p>
+      </div>
+    </div>
+  </Container>
+  <Footer />
+</Layout>
