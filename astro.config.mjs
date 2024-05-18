@@ -7,8 +7,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://ruxwez.github.io",
   base: "fastforward",
-  integrations: [react(), tailwind()],
-  server: {
-    port: 80,
-  }
+  integrations: [react(), tailwind()]
 });
