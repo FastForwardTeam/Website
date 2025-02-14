@@ -689,3 +689,16 @@ body.small .slides {
 body.small .description {
   padding:0 0 0 15px;
 }
+
+
+/* discontinued notice */
+.discontinued {
+  background-color: #d36e01;
+  color: white;
+  
+  text-align: center;
+}
+
+.discontinued a {
+  color: rgb(146, 190, 255);
+}
